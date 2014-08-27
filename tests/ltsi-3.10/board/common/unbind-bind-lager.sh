@@ -38,7 +38,7 @@ exists ()
 }
 
 echo "Test device files exists"
-exists()
+exists
 
 echo "Unbind device"
 echo "$DEVICE_NAME" > "$SYSFS_BASE_DIR/unbind"
