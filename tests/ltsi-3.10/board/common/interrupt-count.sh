@@ -17,4 +17,6 @@ $(dirname $0)/../common/proc-interrupts.sh "$1" > irq_temp
 read IRQ < irq_temp
 IRQ=${IRQ%% [A-Za-z]*}
 IRQ=${IRQ#* }
-echo $IRQ
+#echo $IRQ
+IRQ=`echo $IRQ | sed -e "s/ /+/"`
+echo $((IRQ))
